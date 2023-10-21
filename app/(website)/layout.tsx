@@ -5,9 +5,9 @@ import Navbar from "@/components/navbar";
 
 export async function sharedMetaData(params) {
   const settings = await getSettings();
-
+  const url = process.env.VERCEL_URL? `https://${process.env.VERCEL_URL}` : settings?.url;
   return {
-    metadataBase: new URL(process.env.SITE_URL||"http://localhost:3000"),
+    metadataBase: new URL(url),
     title: {
       default:
         settings?.title ||
@@ -19,7 +19,7 @@ export async function sharedMetaData(params) {
       "Stablo - popular open-source next.js and sanity blog template",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
     authors: [{ name: "Surjith" }],
-    canonical: settings?.url,
+    canonical: url,
     openGraph: {
       images: [
         {
