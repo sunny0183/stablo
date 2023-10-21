@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://stablo-pro.web3templates.com
+Host: http://localhost:3000
 
 # Sitemaps
-Sitemap: https://stablo-pro.web3templates.com/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml
