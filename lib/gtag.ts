@@ -1,12 +1,14 @@
 export const GA_TRACKING_ID = 'G-5856XNV8X4';//process.env.NEXT_PUBLIC_GA_ID
 
+/*
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {
   window.gtag('config', GA_TRACKING_ID, {
     page_path: url,
   })
 }
-
+*/
+/*
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value }) => {
   window.gtag('event', action, {
@@ -15,3 +17,4 @@ export const event = ({ action, category, label, value }) => {
     value: value,
   })
 }
+*/
