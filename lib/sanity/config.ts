@@ -11,7 +11,7 @@ export const useCdn = process.env.NODE_ENV === "production";
 // SANITY_STUDIO_ for 3333 & *.sanity.studio
 export const projectId =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ||
-  (process.env.SANITY_STUDIO_PROJECT_ID as string);
+  (process.env.SANITY_STUDIO_PROJECT_ID as string) || "5t4pdd01";
 
 export const dataset =
   process.env.NEXT_PUBLIC_SANITY_DATASET || ("production" as string);
@@ -23,4 +23,4 @@ export const apiVersion =
 // This is the document id used for the preview secret that's stored in your dataset.
 // The secret protects against unauthorized access to your draft content and have a lifetime of 60 minutes, to protect against bruteforcing.
 export const previewSecretId = process.env
-  .SANITY_REVALIDATE_SECRET as string;
+  .SANITY_REVALIDATE_SECRET as string || "your-secret-key-here";
