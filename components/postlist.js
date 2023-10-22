@@ -56,6 +56,7 @@ export default function PostList({
                 className="object-cover transition-all"
                 fill
                 sizes="(max-width: 768px) 30vw, 33vw"
+                quality={30}
               />
             ) : (
               <span className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 text-gray-200">

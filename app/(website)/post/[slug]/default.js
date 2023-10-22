@@ -85,6 +85,7 @@ export default function Post(props) {
             fill
             sizes="100vw"
             className="object-cover"
+            quality={50}
           />
         )}
       </div>
