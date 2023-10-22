@@ -66,11 +66,6 @@ export default function NavbarAlt(props) {
           path: "/post/sidebar/lessons-of-happiness-i-learned-from-a-mountain-village"
         }
       ]
-    },
-    {
-      label: "Purchase",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
     }
   ];
 

@@ -20,7 +20,7 @@ export default function Footer(props) {
            // It helps us to grow & continue our work. Thank you.
           // OR Purchase PRO version for commercial license.  */}
           <a
-            href="https://web3templates.com/?ref=stablo-template"
+            href="/"
             rel="noopener"
             target="_blank">
             Web3Templates
@@ -30,7 +30,7 @@ export default function Footer(props) {
         <span>
           {" "}
           <a
-            href="https://github.com/web3templates/stablo"
+            href="/"
             rel="noopener"
             target="_blank">
             Github
@@ -40,7 +40,7 @@ export default function Footer(props) {
       <div className="mt-2 flex items-center justify-between">
         <div className="mt-5">
           <a
-            href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
+            href="/"
             target="_blank"
             rel="noopener"
             className="relative block w-44">
@@ -61,6 +61,7 @@ export default function Footer(props) {
 }
 
 const Backlink = () => {
+  return (<span></span>)
   return (
     <a
       href="https://web3templates.com/templates/stablo-minimal-blog-website-template"
