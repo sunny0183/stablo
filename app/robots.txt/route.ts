@@ -7,7 +7,7 @@ export async function GET(req:NextRequest) {
   //const body = generateSiteMap(req.nextUrl.origin, posts);
  
   return new Response(
-    `# *
+  `# *
 User-agent: *
 Allow: /
 
