@@ -7,7 +7,7 @@ export async function sharedMetaData(params) {
   const settings = await getSettings();
   const url = process.env.VERCEL_URL? `https://${process.env.VERCEL_URL}` : settings?.url;
   return {
-    metadataBase: new URL(url),
+    //metadataBase: new URL(url),
     title: {
       default:
         settings?.title ||
