@@ -2,6 +2,9 @@ import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
+import { containerSettings } from "@/lib/cosmos/CosmosClient";
+//import cosmosSingleton from "@/lib/cosmos/CosmosSingleton";
+//import { CosmosClient } from "@azure/cosmos";
 
 export async function sharedMetaData(params) {
   const settings = await getSettings();
@@ -48,6 +51,20 @@ export async function generateMetadata({ params }) {
 
 export default async function Layout({ children, params }) {
   const settings = await getSettings();
+  //if(settings){
+    //const databaseName = process.env.COSMOSDB_DATABASE_NAME || "";
+    //const containerName = process.env.COSMOSDB_CONTAINER_NAME || "";
+    //const client = new CosmosClient(process.env.COSMOSDB_CONNECTION_STRING||"");
+
+    //const database = client.database(databaseName);
+    //const container = database.container(containerName);
+
+  //  console.log(settings);
+    //cosmosSingleton.initialize();
+    //const container = cosmosSingleton.getContainer();
+    //console.log({container});
+  //  await containerSettings?.items.create(settings);
+  //}
   return (
     <>
       <Navbar {...settings} />

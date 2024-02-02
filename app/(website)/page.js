@@ -1,8 +1,17 @@
+import { containerPosts } from "@/lib/cosmos/CosmosClient";
 import HomePage from "./home";
 import { getAllPosts } from "@/lib/sanity/client";
 
 export default async function IndexPage() {
   const posts = await getAllPosts();
+  //if(posts){
+  //  posts.forEach(async post => {
+      //console.log(post);
+  //    await containerPosts.items.create(post);
+  //  });
+    
+  //}
+    
   return <HomePage posts={posts} />;
 }
 

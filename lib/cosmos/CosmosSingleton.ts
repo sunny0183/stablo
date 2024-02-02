@@ -18,14 +18,27 @@ class CosmosSingleton implements CosmosSingletonInterface {
       const databaseName = process.env.COSMOSDB_DATABASE_NAME || "";
       const containerName = process.env.COSMOSDB_CONTAINER_NAME || "";
       const client = new CosmosClient(process.env.COSMOSDB_CONNECTION_STRING||"");
+
+      
+
       const database = client.database(databaseName);
       const container = database.container(containerName);
-      await client.databases.createIfNotExists({
-        id: databaseName,
-      });
-      await database.containers.createIfNotExists({
-        id: containerName,
-      });
+      try{
+        await client.databases.createIfNotExists({
+          id: databaseName,
+        });
+        const containerDefinition = {
+          id: containerName,
+          partitionKey: {
+            paths: ["/_id"],
+            //version: PartitionKeyDefinitionVersion.V2,
+            //kind: PartitionKeyKind.MultiHash,
+          },
+        }
+        await database.containers.createIfNotExists(containerDefinition);
+      } catch(e:any){
+        console.log(e.message);
+      }
       this.database = database;
       this.container = container;
     }
